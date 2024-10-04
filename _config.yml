@@ -1,6 +1,6 @@
 title:               Celeste
 url:                 https:/andiesilva.github.io
-baseurl:             /celeste
+baseurl:             /celeste/
 
 markdown:            kramdown
 highlighter:         rouge
