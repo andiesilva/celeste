@@ -1,6 +1,6 @@
 title:               Celeste
-url:                 https://nicoelayda.github.io
-baseurl:             ""
+url:                 https:/andiesilva.github.io
+baseurl:             /celeste
 
 markdown:            kramdown
 highlighter:         rouge
@@ -19,9 +19,9 @@ sass:
   style:             :compressed
 
 author:
-  name:              Nico Elayda
-  url:               nicoelayda.github.io
-  email:             nico@elayda.com
+  name:              Andie Silva
+  url:               andiesilva.github.io
+  email:             
 
 plugins:
   - jekyll-coffeescript
