@@ -1,4 +1,4 @@
-# stationersparatextsonline
+# Stationers' Paratexts Online
 SPO is a work-in-progress database of non-authorial paratexts written or designed by early English printers, publishers, and booksellers. This repository contains .CSV files and documentation for the project as well as files for its forthcoming static website. 
 
 ## Curent files
