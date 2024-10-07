@@ -17,4 +17,5 @@ vendor/
 
 # custom
 *.bat
-tables/.DS_Store
+.DS_Store
+.DS_Store
