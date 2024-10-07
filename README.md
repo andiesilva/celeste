@@ -1,11 +1,15 @@
-# celeste
+# stationersparatextsonline
+SPO is a work-in-progress database of non-authorial paratexts written or designed by early English printers, publishers, and booksellers. This repository contains .CSV files and documentation for the project as well as files for its forthcoming static website. 
 
-Celeste is a lightweight Jekyll theme that features a minimalist, content-first design. It places your content center stage and lets your readers view them in a clutter-free environment without visual distractions. It is based on [Poole](https://github.com/poole/poole), the Jekyll butler, by [@mdo](https://github.com/mdo).
+## Curent files
 
-![Celeste Preview](https://user-images.githubusercontent.com/4868132/48317284-981f4080-e62a-11e8-94e4-f3d7db9506a7.png)
+- PPO Clean_Sept 2024.csv: includes entries for all the prefaces and dedications listed in Franklin B. Williams's _Index of Dedications and Commendatory Verses in English Books before 1641_ (1962).
 
-You can check out Celeste in action in [the demo site](https://nicoelayda.github.io/celeste).
+## Files TBA
 
-## License
+- Index of all stationers listed in the database with their corresponding identifying bios according to the British Book Trade Index (BBTI), the Oxford Dictionary of National Biography, or Wikipedia.
+- Dedicated list of paratexts by women stationers, including publications after 1641.
 
-MIT. See [LICENSE](https://github.com/nicoelayda/celeste/blob/master/LICENSE).
+## Copyright
+
+This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1).
