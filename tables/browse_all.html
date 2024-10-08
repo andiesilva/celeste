@@ -37,11 +37,7 @@
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script src="js/csv_to_html_table.js"></script>
 
-	    <!-- hidden column --> 
-
-	    
-
-	    
+	 
 	<script>
        
         CsvToHtmlTable.init({
@@ -54,14 +50,19 @@
             },
             datatables_options: {
                 paging: true
-		    columnDefs: [
-        { targets: [0, 1], visible: true},
-        { targets: '_all', visible: false }
-    ]
             },
             
         });
     </script>
+
+<script>function column()
+
+	columnDefs: [
+        { targets: [0, 1], visible: true},
+        { targets: '_all', visible: false }
+    ]
+
+</script>	    
 	  
 <script>function filterText()
 	{  
