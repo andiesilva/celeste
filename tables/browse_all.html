@@ -39,20 +39,8 @@
 
 
 	<script>
-        function format_link(link) {
-            if (link)
-                return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-            else return "";
-        }
+       
 		
-function filterText()
-	{  
-document.getElementById('searchBar').value = $('#filterText').val();
-$('#searchBar').trigger('keyup');
-}
-
-document.getElementById('table-container').scrollIntoView();
-}
 
         CsvToHtmlTable.init({
             csv_path: "data/PPO Williams_Oct 2024.csv",
@@ -65,13 +53,19 @@ document.getElementById('table-container').scrollIntoView();
             datatables_options: {
                 paging: true
             },
-            custom_formatting: [
-                [4, format_link]
+            custom_formatting: 
             ]
         });
     </script>
 	  
+<script>function filterText()
+	{  
+document.getElementById('searchBar').value = $('#filterText').val();
+$('#searchBar').trigger('keyup');
+}
 
+document.getElementById('table-container').scrollIntoView();
+}</script>
 	 
 </body>
 
