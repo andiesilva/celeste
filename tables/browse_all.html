@@ -48,21 +48,11 @@
                 separator: ",",
                 delimiter: '"'
             },
-            datatables_options: {
-                paging: true
-            },
-            
-        });
+             datatables_options: {"paging": true,
+                             "columnDefs": [{"targets": [7], "visible": false }]},
+  });
     </script>
-
-<script>function column()
-
-	columnDefs: [
-        { targets: [0, 1], visible: true},
-        { targets: '_all', visible: false }
-    ]
-
-</script>	    
+	    
 	  
 <script>function filterText()
 	{  
