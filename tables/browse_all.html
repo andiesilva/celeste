@@ -22,6 +22,7 @@
                 <h1>Browse</h1>
 <a href="https://andiesilva.github.io/celeste//">back</a>
                 <p></p>
+                <label class="filterLabel">Category Search:<br> <select id='filterText' selected="selected" style='display:inline-block;width: 300px;margin-left: 5px;' onchange='filterText()'> <option disabled selected>Select...</option> <option value='Trade'>Trade</option> <option value='Genre'>Genre</option> <option value='Gender'>Gender</option> <option value='Paratext Type'>Paratext Type</option> </select></label>
                 <div id="table-container"></div>
             </div>
         </main>
@@ -32,6 +33,13 @@
                     <a href="http://derekeder.com">Derek
                         Eder</a></p>
             </div>
+            <script>
+function filterText()
+	{  
+document.getElementById('searchBar').value = $('#filterText').val();
+$('#searchBar').trigger('keyup');
+}
+</script>
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
