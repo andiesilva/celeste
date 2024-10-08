@@ -44,19 +44,7 @@
                 return "<a href='" + link + "' target='_blank'>" + link + "</a>";
             else return "";
         }
-		DataTable('#example', {
-    columnDefs: [
-        {
-            target: 7,
-            visible: false,
-            searchable: false
-        },
-        {
-            target: 11,
-            visible: false
-        }
-    ]
-});
+
 
         CsvToHtmlTable.init({
             csv_path: "data/PPO Williams_Oct 2024.csv",
