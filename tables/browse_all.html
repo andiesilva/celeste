@@ -22,20 +22,14 @@
                 <h1>Browse</h1>
 <a href="https://andiesilva.github.io/celeste//">back</a>
                 <p></p>
-                <label class="filterLabel">Category Search:<br> <select id='filterText' selected="selected" style='display:inline-block;width: 300px;margin-left: 5px;' onchange='filterText()'> <option disabled selected>Select...</option> <option value='Printer'>Printer</option> <option value='Bookseller'>Bookseller</option> <option value='Publisher'>Publisher</option> <option value='Author'>Author</option><option value='Religion'>Religion</option> </select></label>
+                <label class="filterLabel">Category Search:<br> <select id='filterText' selected="selected" style='display:inline-block;width: 300px;margin-left: 5px;' onchange="filterText()"> <option disabled selected>Select...</option> <option value="Printer">Printer</option> <option value="Bookseller">Bookseller</option> <option value="Publisher">Publisher</option> <option value="Author">Author</option><option value="Religion">Religion</option> </select></label>
                 <div id="table-container"></div>
             </div>
         </main>
-        <footer class="row">
-            <div class="col">
-                <hr>
-                <p class="text-right"><a href="https://github.com/derekeder/csv-to-html-table">CSV to HTML Table</a> by
-                    <a href="http://derekeder.com">Derek
-                        Eder</a></p>
-            </div>
-           
-        </footer>
+      <div id="footer">  
+	      <p>Contact me info</p>
     </div>
+	
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.csv.min.js"></script>
@@ -43,13 +37,7 @@
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script src="js/csv_to_html_table.js"></script>
 
-<script>
-function filterText()
-	{  
-document.getElementById('searchBar').value = $('#filterText').val();
-$('#searchBar').trigger('keyup');
-}
-</script>
+
 	<script>
         function format_link(link) {
             if (link)
@@ -73,6 +61,13 @@ $('#searchBar').trigger('keyup');
             ]
         });
     </script>
+	    <script>
+function filterText()
+	{  
+document.getElementById('searchBar').value = $('#filterText').val();
+$('#searchBar').trigger('keyup');
+}
+</script>
 
 	 
 </body>
