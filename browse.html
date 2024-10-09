@@ -50,23 +50,7 @@
             },
              datatables_options: {"paging": true,
                             "columnDefs": [{"targets": [0, 1, 7, 8, 9, 13, 16, 26], "visible": false }] },
-		"layout": {
-        "topStart": {
-            "searchPanes": {
-                "viewTotal": true,
-                "columns": [5]
-            }
-        }
-    },
-    "columnDefs": [
-        {
-            "searchPanes": {
-                "options": [
-                    { "label": 'Browse by Printers',
-                        "value": function (rowData, rowIdx) {
-                            return rowData[5] !== 'Printer';
-                        }
-                    }]
+		
   });
     </script>
 	    
