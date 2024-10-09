@@ -1,6 +1,68 @@
----
-layout: post
-title: Browse
----
 
-<iframe style="border-style: none;" src="https://andiesilva.github.io/celeste//tables/browse_all.html" height="950" width="900"></iframe>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Browse all entries</title>
+    <meta name="author" content="Andie Silva">
+    <meta content="See all entries">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+</head>
+
+<body>
+  
+    <div class="container-fluid">
+        <main class="row">
+            <div class="col">
+                <h1>Browse</h1>
+<a href="https://andiesilva.github.io/celeste//">back</a>
+                <p></p>
+                <label class="filterLabel">Category Search:<br> <select id='filterText' selected="selected" style='display:inline-block;width: 300px;margin-left: 5px;' onchange="filterText()"> <option disabled selected>Select...</option> <option value="Printer">Printer</option> <option value="Bookseller">Bookseller</option> <option value="Publisher">Publisher</option> <option value="Author">Author</option><option value="Religion">Religion</option> </select></label>
+                <div id="table-container"></div>
+            </div>
+        </main>
+      <div id="footer">  
+	      <p>Contact me info</p>
+    </div>
+	</footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.csv.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/csv_to_html_table.js"></script>
+
+	 
+	<script>
+       
+        CsvToHtmlTable.init({
+            csv_path: "data/tbrender.csv",
+            element: "table-container",
+            allow_download: true,
+            csv_options: {
+                separator: ",",
+                delimiter: '"'
+            },
+             datatables_options: {"paging": true,
+                             "columnDefs": [{"targets": [0, 1, 7, 8, 9], "visible": false }]},
+  });
+    </script>
+	    
+	  
+<script>function filterText()
+	{  
+document.getElementById('searchBar').value = $('#filterText').val();
+$('#searchBar').trigger('keyup');
+}
+
+document.getElementById('table-container').scrollIntoView();
+}</script>
+	 
+</body>
+
+</html>
