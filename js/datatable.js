@@ -1,1 +1,1 @@
-var table = new DataTable('#Williams');
+new DataTable('#Williams');
