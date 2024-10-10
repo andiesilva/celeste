@@ -2,21 +2,14 @@
 <html>
 <head>
     
-
-     <!-- jQuery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  
-    
- <!-- DataTables CSS -->
+  <!-- DataTables CSS -->
   <link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/fh-4.0.1/r-3.0.3/sb-1.8.1/sp-2.3.3/sr-1.4.1/datatables.min.css" rel="stylesheet">
  
 
-
-     
-   
-    <!-- DataTables JS -->
-<script src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/fh-4.0.1/r-3.0.3/sb-1.8.1/sp-2.3.3/sr-1.4.1/datatables.min.js"></script>
-    <script type="text/javascript" src="js/datatable.js"></script>
+     <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+ 
    
    
    <title>Browse</title>
@@ -25,8 +18,9 @@
 </head>
     <body>
         <div class="container">
-    <table id=“Williams” class="display" style="width:100%">
-<thead><tr><th>First Name</th>
+    <table id="Williams" class="display" style="width:100%">
+<thead><tr>
+  <th>First Name</th>
 <th>Last Name</th>
 <th>Paratext Author</th>
 <th>Gender</th>
@@ -53,8 +47,10 @@
 <th>Notes</th>
 <th>Copy From</th>
 <th>Source</th>
-</tr></thead>
-<tbody><tr>
+</tr>
+      </thead>
+<tbody>
+  <tr>
 <td>Richard</td>
 <td>Pynson</td>
 <td>Richard Pynson</td>
@@ -17370,6 +17366,10 @@
 </tbody></table>
      
         </div>
+     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/fh-4.0.1/r-3.0.3/sb-1.8.1/sp-2.3.3/sr-1.4.1/datatables.min.js"></script>
+      
+      <script>$('#Williams').DataTable();</script>; 
+      
     </body>
     
 </html>
