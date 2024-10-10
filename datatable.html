@@ -65,7 +65,7 @@
 <td> </td>
 <td> </td>
 <td>Canterbury Tales</td>
-<td>Verse | Poetry</td>
+    <td><ul><li> Verse</li> <li> Poetry</li><ul></td>
 <td>1492</td>
 <td>1</td>
 <td>[Publisher's note]</td>
@@ -17368,15 +17368,13 @@
         </div>
      <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/fh-4.0.1/r-3.0.3/sb-1.8.1/sp-2.3.3/sr-1.4.1/datatables.min.js"></script>
       
-    <script> $('#Williams').DataTable
-( {
-    responsive: true
-} )
-( {
+    <script> $('#Williams').DataTable( {
     'columnDefs' : [
         //hide the second & fourth column
         { 'visible': false, 'targets': [0,1, 7, 8, 9, 13, 16, 26] }
-    ]
+    ],
+  responsive: true
+  
 });
       </script>
     </body>
