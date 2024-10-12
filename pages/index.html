@@ -3,6 +3,17 @@ layout: default
 title: Browse
 ---
 <script type="text/javascript">
+function setIframeSize(iframe) {
+    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+    var iframeBody;
+    if (iframeDocument) {
+        iframeBody = iframeDocument.querySelector('body');
+        iframeBody.style.overflowY = 'scroll';
+        iframeBody.style.overflowX = 'hidden';
+    }
+}
+</script>
+<script type="text/javascript">
 function resizeIFrame(){
    if (parent.postMessage) {
      var body   = document.body,
