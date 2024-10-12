@@ -2,33 +2,8 @@
 layout: default
 title: Browse
 ---
-<script type="text/javascript">
-function setIframeSize(iframe) {
-    var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-    var iframeBody;
-    if (iframeDocument) {
-        iframeBody = iframeDocument.querySelector('body');
-        iframeBody.style.overflowY = 'scroll';
-        iframeBody.style.overflowX = 'hidden';
-    }
-}
-</script>
-<script type="text/javascript">
-function resizeIFrame(){
-   if (parent.postMessage) {
-     var body   = document.body,
-        html   = document.documentElement,
-        loc    = document.location,
-        height = Math.max(body.scrollHeight, body.offsetHeight,
-                          html.clientHeight, html.scrollHeight, html.offsetHeight),
-        width  = Math.max(body.scrollWidth, body.offsetWidth, //add a bit of margin
-                          html.clientWidth, html.scrollWidth, html.offsetWidth) + 5;
-  
-      parent.postMessage({ h: height, w: width }, loc.protocol + '//' + loc.host);
-   }
-}
-</script>
-<script type="text/javascript" src="bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+
+
 <p>
   Hello world. 
   </p>
@@ -38,6 +13,14 @@ function resizeIFrame(){
 <style>
    <style> .fixed-container { display: fixed; justify-content: center; align-items: center; height: 100vh; }
 .iframe-container { width: 100%; height: 100% !important; } 
+
+    @media screen and (max-width: 750px) {
+    iframe {
+        max-width: 100% !important;
+        width: auto !important;
+        height: auto !important;
+    }
+}
 
    {
     border-top-width: 0px;
@@ -50,33 +33,13 @@ function resizeIFrame(){
   padding-left: 15px !important;
   }
 
-  {    
-  overflow-y:scroll;
-  overflow-x:hidden; 
-}
 
 </style>
 </head>
 <body>
   <body onload="resizeIFrame();" style="white-space: nowrap;">
    <div class="col-sm-12">
-        <iframe display="block" src="https://andiesilva.github.io/celeste/datatable.html" width="900" height="600" frameBorder="0"></iframe>
+        <iframe display="block" src="https://andiesilva.github.io/celeste/datatable.html" frameBorder="0"></iframe>
    </div>
-    <script type="text/javascript">
-        var resizeIFrame = function(event) {
-            var loc = document.location;
-            if (event.origin != loc.protocol + '//' + loc.host) return;
-           
-            var myIFrame = document.getElementById('myIFrame');
-            if (myIFrame) {
-                myIFrame.style.height = event.data.h + "px";
-                myIFrame.style.width  = event.data.w + "px";
-            }
-        };
-        if (window.addEventListener) {
-            window.addEventListener("message", resizeIFrame, false);
-        } else if (window.attachEvent) {
-            window.attachEvent("onmessage", resizeIFrame);
-        }
-        </script>
+   
   </body>
