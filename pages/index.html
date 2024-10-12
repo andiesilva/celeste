@@ -1,15 +1,9 @@
- {% include head.html %}
-
+---
+layout: default
+name: Data
+---
   <body>
-    <nav class="nav-main">
-      <ul>
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/about/">about</a></li>
-        <li class="logo"><a class="hvr-ripple-out" href="{{ site.baseurl }}/"><i class="fa fa-book-open">[ ]</i></a></li>
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/blog/">updates</a></li>
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/browse.html">browse</a></li>
-        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/pages/">data</a></li>
-      </ul>
-    </nav>
+  
 
 <p>
   Hello world. 
@@ -18,7 +12,10 @@
   Instructions for browsing </p>
  
 <style>
-   <style> .fixed-container { display: fixed; justify-content: center; align-items: center; height: 100vh; }
+ iframe {
+  overflow: hidden;
+}
+   .fixed-container { display: fixed; justify-content: center; align-items: center; height: 100vh; }
 .iframe-container { width: 100%; height: 100% !important; } 
 
 }
@@ -38,9 +35,8 @@
 </style>
 </head>
 <body>
-  <body onload="resizeIFrame();" style="white-space: nowrap;">
    <div id="resize_wrapper" style="height: 600px;">
-        <iframe display="block" src="https://andiesilva.github.io/celeste/datatable.html" frameBorder="0" width="800px" height="800px" scroll="false"></iframe>
+        <iframe display="block" src="https://andiesilva.github.io/celeste/datatable.html" frameBorder="0" width="800px" height="800px" scrolling="no"></iframe>
    </div>
    
   </body>
