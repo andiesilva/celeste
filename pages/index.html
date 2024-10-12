@@ -1,8 +1,15 @@
----
-layout: default
-title: Browse
----
+ {% include head.html %}
 
+  <body>
+    <nav class="nav-main">
+      <ul>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/about/">about</a></li>
+        <li class="logo"><a class="hvr-ripple-out" href="{{ site.baseurl }}/"><i class="fa fa-book-open">[ ]</i></a></li>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/blog/">updates</a></li>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/browse.html">browse</a></li>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/pages/">data</a></li>
+      </ul>
+    </nav>
 
 <p>
   Hello world. 
@@ -32,7 +39,7 @@ title: Browse
 </head>
 <body>
   <body onload="resizeIFrame();" style="white-space: nowrap;">
-   <div class="col-sm-12">
+   <div id="resize_wrapper" style="height: 600px;">
         <iframe display="block" src="https://andiesilva.github.io/celeste/datatable.html" frameBorder="0" width="800px" height="800px" scroll="false"></iframe>
    </div>
    
