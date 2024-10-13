@@ -13,6 +13,42 @@
    
    
    <title>Browse</title>
+  
+  <style>
+    #resize_wrapper {
+			position: relative;
+			height: 800px;
+			padding: 0.5em 0.5em 1.5em 0.5em;
+			border: 1px solid #aaa;
+			border-radius: 0.5em;
+			background-color: #f9f9f9;
+		}
+
+		#resize_handle {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 1.5em;
+			border-bottom-right-radius: 0.5em;
+			border-bottom-left-radius: 0.5em;
+			text-align: center;
+			font-size: 0.8em;
+			line-height: 1.5em;
+			background-color: #4d90fe;
+			color: white;
+			cursor: pointer;
+		}
+
+		table.dataTable th,
+		table.dataTable td {
+			white-space: nowrap;
+		}
+
+		div.dt-length {
+			display: none;
+		}
+  </style>
 
  
 </head>
@@ -17369,9 +17405,10 @@
      <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/fh-4.0.1/r-3.0.3/sb-1.8.1/sp-2.3.3/sr-1.4.1/datatables.min.js"></script>
       
     <script> $('#Williams').DataTable( {
- scrollY: '500px',
+  scrollCollapse: true,
     'columnDefs' : [
-        //hide the second & fourth column
+      {width: '100%', targets: [3, 4]},
+      //hide the second & fourth column
         { 'visible': false, 'targets': [0,1, 7, 8, 9, 13, 16, 26] }
     ],
   responsive: true
