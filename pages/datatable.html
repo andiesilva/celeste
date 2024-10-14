@@ -30,15 +30,7 @@
    <title>Browse</title>
   
   <style>
-    #resize_wrapper {
-			position: relative;
-			height: 1200px;
-            width: 800px;
-			padding: 0.5em 0.5em 0.5em .5em;
-			border: 1px solid #aaa;
-			border-radius: 0.5em;
-			background-color: #f9f9f9;
-		}
+   
 
 		#resize_handle {
 			position: absolute;
@@ -79,12 +71,20 @@ table.Williams th:nth-child(4) {
         padding-right: 0px; 
        margin-right: 20px;
       margin-left: 20px;
+    
 
     }
     
-    
+    html,body{
+  width:100%; /* your remedy here */
+  height:100%; /* your remedy here */
+  margin:0 /* default set */
+  padding:0; /* default set */
+}
     
   </style>
+  
+
 
  
 </head>
@@ -109,7 +109,7 @@ table.Williams th:nth-child(4) {
           </div>
         
         <div id="resize_wrapper" class="container">
-    <table id="Williams"  class="display pageResize" style="width:100%" class="nowrap">
+    <table id="Williams"  class="display pageResize" style="width:200%" class="nowrap">
 	    
 <thead><tr>
   <th>First Name</th>
@@ -17473,4 +17473,3 @@ table.Williams th:nth-child(4) {
     </body>
     
 </html>
-	      
