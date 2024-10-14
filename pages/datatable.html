@@ -1,43 +1,134 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Browse</title>
-    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <link href="DataTables/datatables.min.css" rel="stylesheet">
+  
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic|Source+Code+Pro:400,700" type="text/css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" type="text/css">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/favicon.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.baseurl }}/apple-touch-icon.png">
+  
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
+
     
-    <script src="DataTables/datatables.min.js"></script>
+  <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/fh-4.0.1/r-3.0.3/sb-1.8.1/sp-2.3.3/sr-1.4.1/datatables.min.css" rel="stylesheet">
+ 
+
+     <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+ <script type="text/javascript" src="//cdn.datatables.net/plug-ins/2.1.8/features/pageResize/dataTables.pageResize.min.js"></script>
+   
+   
+   <title>Browse</title>
+  
+  <style>
+    #resize_wrapper {
+			position: relative;
+			height: 900px;
+			padding: 0.5em 0.5em 0.5em .5em;
+			border: 1px solid #aaa;
+			border-radius: 0.5em;
+			background-color: #f9f9f9;
+		}
+
+		#resize_handle {
+			position: absolute;
+			bottom: 0;
+			left: 100;
+			right: 0;
+			height: 1.5em;
+			border-bottom-right-radius: 1.5em;
+			border-bottom-left-radius: 0.5em;
+			text-align: center;
+			font-size: 0.8em;
+			line-height: 1.5em;
+			background-color: #4d90fe;
+			color: white;
+			cursor: pointer;
+		}
+
+		table.dataTable th,
+		table.dataTable td {
+			white-space: nowrap;
+		}
+
+	  table.dataTable th:nth-child(0),
+table.dataTable th:nth-child(1),
+table.dataTable th:nth-child(3) {
+  width: 20px;
+  max-width: 100px;
+  word-break: break-all;
+  white-space: pre-line;
+}
+
+		div.dt-length {
+			display: none;
+		}
+  </style>
+
+ 
 </head>
-    <table id=“Williams” class="table table-bordered table-hover table-condensed">
-<thead><tr><th title="Field #1">First Name</th>
-<th title="Field #2">Last Name</th>
-<th title="Field #3">Paratext Author</th>
-<th title="Field #4">Gender</th>
-<th title="Field #5">Imprint</th>
-<th title="Field #6">Trade</th>
-<th title="Field #7">Additional Print Agent (STC)</th>
-<th title="Field #8">Title Page Author</th>
-<th title="Field #9">Author First Name</th>
-<th title="Field #10">Author Last Name</th>
-<th title="Field #11">Publication Author</th>
-<th title="Field #12">Additional Authors</th>
-<th title="Field #13">Title</th>
-<th title="Field #14">Alternate Titles</th>
-<th title="Field #15">Genre</th>
-<th title="Field #16">Year</th>
-<th title="Field #17">Total Paratexts</th>
-<th title="Field #18">Paratext Title</th>
-<th title="Field #19">Paratext Type</th>
-<th title="Field #20">Dedicatee</th>
-<th title="Field #21">Assumed Dedicatee Gender</th>
-<th title="Field #22">Illustration</th>
-<th title="Field #23">STC No</th>
-<th title="Field #24">Additional Paratexts</th>
-<th title="Field #25">Notes</th>
-<th title="Field #26">Copy From</th>
-<th title="Field #27">Source</th>
-</tr></thead>
-<tbody><tr>
+    <body style="margin:5; padding: 5">
+       <nav class="nav-main">
+      <ul>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/about/">about</a></li>
+        <li class="logo"><a class="hvr-ripple-out" href="{{ site.baseurl }}/"><i class="fa fa-book-open">[ ]</i></a></li>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/blog/">updates</a></li>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/browse.html">browse</a></li>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/pages/">data</a></li>
+      </ul>
+    </nav>
+      <p>
+        <div class="text">
+          Hello world
+        <p>
+          Instructions
+          </div>
+        
+        <div id="resize_wrapper" class="container">
+    <table id="Williams"  class="display pageResize" style="width:100%" class="nowrap">
+	    
+<thead><tr>
+  <th>First Name</th>
+<th>Last Name</th>
+<th>Paratext Author</th>
+<th>Gender</th>
+<th>Imprint</th>
+<th>Trade</th>
+<th>Additional Print Agent (STC)</th>
+<th>Title Page Author</th>
+<th>Author First Name</th>
+<th>Author Last Name</th>
+<th>Publication Author</th>
+<th>Additional Authors</th>
+<th>Title</th>
+<th>Alternate Titles</th>
+<th>Genre</th>
+<th>Year</th>
+<th>Total Paratexts</th>
+<th>Paratext Title</th>
+<th>Paratext Type</th>
+<th>Dedicatee</th>
+<th>Assumed Dedicatee Gender</th>
+<th>Illustration</th>
+<th>STC No</th>
+<th>Additional Paratexts</th>
+<th>Notes</th>
+<th>Copy From</th>
+<th>Source</th>
+</tr>
+      </thead>
+<tbody>
+  <tr>
 <td>Richard</td>
 <td>Pynson</td>
 <td>Richard Pynson</td>
@@ -52,10 +143,10 @@
 <td> </td>
 <td> </td>
 <td>Canterbury Tales</td>
-<td>Verse | Poetry</td>
+    <td><ul><li> Verse</li> <li> Poetry</li><ul></td>
 <td>1492</td>
 <td>1</td>
-<td>[Publisher&#39;s note]</td>
+<td>[Publisher's note]</td>
 <td>To the Reader</td>
 <td> </td>
 <td> </td>
@@ -17352,5 +17443,19 @@
 </tr>
 </tbody></table>
      
+        </div>
+     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/fh-4.0.1/r-3.0.3/sb-1.8.1/sp-2.3.3/sr-1.4.1/datatables.min.js"></script>
+      
+    <script> $('#Williams').DataTable( {
+	pageLength: 20,
+    'columnDefs' : [
+      //hide the second & fourth column
+        { 'visible': false, 'targets': [0, 1, 7, 8, 9, 13, 16, 26] }
+    ],
+  responsive: true,
+  
+});
+      </script>
     </body>
+    
 </html>
