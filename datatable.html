@@ -17,7 +17,7 @@
   <style>
     #resize_wrapper {
 			position: relative;
-			height: 1200px;
+			height: 900px;
 			padding: 0.5em 0.5em 1.5em 0.5em;
 			border: 1px solid #aaa;
 			border-radius: 0.5em;
@@ -45,8 +45,8 @@
 			white-space: nowrap;
 		}
 
-	  table.dataTable th:nth-child(2),
-table.dataTable th:nth-child(3),
+	  table.dataTable th:nth-child(1),
+table.dataTable th:nth-child(2),
 table.dataTable th:nth-child(4) {
   width: 60px;
   max-width: 100px;
@@ -17415,6 +17415,7 @@ table.dataTable th:nth-child(4) {
      <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.7.0/dt-2.1.8/b-3.1.2/b-colvis-3.1.2/b-html5-3.1.2/fh-4.0.1/r-3.0.3/sb-1.8.1/sp-2.3.3/sr-1.4.1/datatables.min.js"></script>
       
     <script> $('#Williams').DataTable( {
+	pageLength: 20,
     'columnDefs' : [
       //hide the second & fourth column
         { 'visible': false, 'targets': [0, 1, 7, 8, 9, 13, 16, 26] }
