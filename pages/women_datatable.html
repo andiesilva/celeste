@@ -1,6 +1,6 @@
 ---
 layout: null
-title: Overall Data
+title: Women Data
 ---
 <!DOCTYPE html>
 <html>
@@ -25,7 +25,7 @@ title: Overall Data
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <title>Browse</title>
+    <title>Women Stationers</title>
   
   </head>
   <body cz-shortcut-listen="true">
@@ -41,17 +41,13 @@ title: Overall Data
     </nav>
 
     <main>
-      <p>
         <div class="text">
-          <ul>
-		        <li>
-              Clicking on the arrow next to the paratext author's name will expand the entry with further details. See the <a href="{{ site.baseurl }}/about/">about page</a> for a full documentation explaning the data model and taxonomy.
-            </li>
-        
-		        <li>
-              Filtered search functionalities are in progress, but the dropdown menus work! You can stack searches by selecting different items from each dropdown. You may also use the search box to narrow this table down using keywords. Use quotation marks if you would like to search for an exact phrase.
-            </li>
-          </ul>
+            <p>
+                The following table is a work in progress, tracing the paratexts included or designed by women stationers. I privilege works with at least two or more paratexts, focusing in particular on paratexts that reveal the labor of book design, such as errata, tables of content, or catalogues of books for sale.
+            </p>
+            <p>
+                A short list of paratexts with only one paratext will follow soon! This facet of the project is ongoing, as I make my way through roughly three thousand EEBO records marked "women in publishing" (many thanks to the graduate students who generated this tag!).
+            </p>
         </div>
       </p>
 
@@ -85,34 +81,40 @@ title: Overall Data
             <select id="tradeFilter" class="form-control">
               <option value="">Filter by Trade</option>
               <option value="Printer">Printer</option>
-              <option value="Publisher">Publisher</option>
               <option value="Bookseller">Bookseller</option>
-              <option value="Editor">Editor</option>
-              <option value="Stationer">Stationer</option>
             </select>
 
             <select id="genreFilter" class="form-control">
               <option value="">Filter by Genre</option>
-              <option value="Agriculture">Agriculture</option>
-              <option value="Almanac">Almanac</option>
-              <option value="Conduct">Conduct</option>
-              <option value="Devotional">Devotional</option>
-              <option value="Drama">Drama</option>
-              <option value="Epigrams">Epigrams</option>
-              <option value="Gender">Gender</option>
+              <option value="Ethics">Ethics</option>
+              <option value="Geography">Geography</option>
               <option value="History">History</option>
-              <option value="Household">Household</option>
-              <option value="Humor">Humor</option>
-              <option value="Language">Language</option>
-              <option value="Medicine">Medicine</option>
-              <option value="Military">Military</option>
-              <option value="Music">Music</option>
+              <option value="Husbandry">Husbandry</option>
+              <option value="Mathematics">Mathematics</option>
+              <option value="Proclamations">Proclamations</option>
+              <option value="Translation">Translation</option>
               <option value="Politics">Politics</option>
               <option value="Prose">Prose</option>
               <option value="Religion">Religion</option>
-              <option value="Translation">Translation</option>
+              <option value="Bible">Bible</option>
+              <option value="Theology">Theology</option>
+              <option value="Economics">Economics</option>
               <option value="Travel">Travel</option>
-              <option value="Verse">Verse</option>
+              <option value="Agriculture">Agriculture</option>
+              <option value="Poetry">Poetry</option>
+              <option value="Medicine">Medicine</option>
+              <option value="Instructions">Instructions</option>
+              <option value="Cooking">Cooking</option>
+              <option value="Ettiquete and Courtesy">Ettiquete and Courtesy</option>
+              <option value="Distillation">Distillation</option>
+              <option value="Oaths">Oaths</option>
+              <option value="Drama">Drama</option>
+              <option value="Customs">Customs</option>
+              <option value="Science">Science</option>
+              <option value="Literature">Literature</option>
+              <option value="Law">Law</option>
+              <option value="Education">Education</option>
+              <option value="Philosophy">Philosophy</option>
             </select>
 
             <select id="paratextFilter" class="form-control">
@@ -122,32 +124,10 @@ title: Overall Data
               <option value="Dedication">Dedication</option>
               <option value="Errata">Errata</option>
               <option value="Index">Index</option>
-              <option value="Privilege">Privilege</option>
               <option value="Table of Contents">Table of Contents</option>
               <option value="To the Reader">To the Reader</option>
               <option value="To the Stationer">To the Stationer</option>
             </select>
-
-            <select id="genderFilter" class="form-control">
-              <option value="">Filter by Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Male | Female">Male | Female</option>
-              <option value="Unknown">Unknown</option>
-            </select>
-
-            <select id="dedicateeGenderFilter" class="form-control">
-              <option value="">Filter by Dedicatee Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Male | Female | Couple">Male | Female | Couple</option>
-              <option value="Male | Female | Group">Male | Female | Group</option>
-            </select>
-
-            <br>
-
-            <input class="form-control" type="checkbox" id="dedicateeFilter" value="True" unchecked>
-            <label for="dedicateeFilter">Check for filtering by whether or not has dedicatee</label>
 
             <br>
             <br>
@@ -163,11 +143,11 @@ title: Overall Data
       </div>
         
       <div id="resize_wrapper" class="container">
-        {% include combined_table.html %}
+        {% include women_table.html %}
       </div>
     </main>
 
     <script src="https://cdn.datatables.net/v/dt/dt-3.0.1/b-4.0.1/cc-2.0.0/fh-5.0.0/r-4.0.1/sb-2.0.0/datatables.min.js" integrity="sha384-5E6d0cJygp1iaD6Yi0twPAVTAXv1baHBYKNvci9TsLg/cxWDDSDSHAhvT22ZvJOD" crossorigin="anonymous"></script>
-    <script src="{{ site.baseurl }}/js/combined_datatable.js"></script>
+    <script src="{{ site.baseurl }}/js/women_datatable.js"></script>
   </body>
 </html>
