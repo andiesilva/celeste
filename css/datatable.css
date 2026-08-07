@@ -1,0 +1,99 @@
+.dt-layout-row .dt-layout-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Content/Box */
+.filter-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+table.CombinedSPO th,
+table.CombinedSPO td {
+    white-space: nowrap;
+}
+
+table {
+    width: 210% !important;
+    vertical-align: middle;
+}
+
+table.CombinedSPO  {
+    width: 20px;
+    max-width: 50px;
+    word-break: break-all;
+    white-space: pre-line;
+}
+
+div.dt-length {
+    display: none;
+}
+
+.container {
+    display: block;
+    padding-left: 50px; 
+    padding-right: 50px; 
+    margin-right: auto;
+    margin-left: 100px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.text {
+    display: block;
+    padding-left: 100px; 
+    padding-right: 50px; 
+    margin-right: auto;
+    margin-left: 50px;
+    width: 80%;
+    justify-content: center;    
+}
+
+/* dropdown filter */
+.select.form-control{
+    display: inline-block;
+    width: 200px;
+    margin-left: 25px;
+}
+
+.filter {
+    display: inline-block;
+    padding-left: 100px; 
+    padding-right: 50px; 
+    margin-right: auto;
+    margin-left: 50px;
+    width: 80%;    
+}

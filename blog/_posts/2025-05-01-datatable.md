@@ -3,7 +3,7 @@ layout: post
 title: DataTable in Progress!
 ---
 
-The <a href="https://andiesilva.github.io/celeste//pages/datatable.html">Browse</a> page is live with all the recorded entries from William's <em>Index</em>. I'm currently working on adding search and filter capabilities to the table, hopefully to be completed by Fall 2025! Individual entries will also eventually have their own pages with detailed information.
+The <a href="https://andiesilva.github.io/spo/pages/datatable">Browse</a> page is live with all the recorded entries from William's <em>Index</em>. I'm currently working on adding search and filter capabilities to the table, hopefully to be completed by Fall 2025! Individual entries will also eventually have their own pages with detailed information.
 
 ### Dataset Updates: May 2025
 
