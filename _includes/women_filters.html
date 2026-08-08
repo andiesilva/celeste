@@ -1,0 +1,94 @@
+<div class="filter">
+    <div>
+        <button class="open-button" onclick="openForm()">Filter</button> by Trade, Genre, and Paratext Type, and more.
+    </div>
+    <br>
+    <div>
+        <button type="reset" onclick="clearFilters()">Clear Filters</button>
+    </div>
+</div>
+
+<div id="filter-modal" class="modal">
+    <div class="filter-content" id="filter-selection">
+        <span class="close">&times;</span>
+        <form>
+
+        <select id="yearFilter" class="form-control">
+            <option value="">Filter by Year</option>
+            <option value="1492-1542">1492-1542</option>
+            <option value="1543-1593">1543-1593</option>
+            <option value="1594-1644">1594-1644</option>
+            <option value="1645-1679">1645-1679</option>
+        </select>
+
+        <input class="form-control" list="print-agents" id="printAgentChoiceFilter" placeholder="Print Agent...">
+        <datalist id="print-agents">
+        </datalist>
+
+        <select id="tradeFilter" class="form-control">
+            <option value="">Filter by Trade</option>
+            <option value="Printer">Printer</option>
+            <option value="Bookseller">Bookseller</option>
+        </select>
+
+        <select id="genreFilter" class="form-control">
+            <option value="">Filter by Genre</option>
+            <option value="Agriculture">Agriculture</option>
+            <option value="Bible">Bible</option>
+            <option value="Conduct and Etiquette">Conduct and Etiquette</option>
+            <option value="Cooking">Cooking</option>
+            <option value="Cosmography">Cosmography</option>
+            <option value="Customs">Customs</option>
+            <option value="Distillation">Distillation</option>
+            <option value="Drama">Drama</option>
+            <option value="Economics">Economics</option>
+            <option value="Education">Education</option>
+            <option value="Ethics">Ethics</option>
+            <option value="Ettiquete and Courtesy">Ettiquete and Courtesy</option>
+            <option value="Geography">Geography</option>
+            <option value="History">History</option>
+            <option value="Husbandry">Husbandry</option>
+            <option value="Illustration">Illustration</option>
+            <option value="Instructions">Instructions</option>
+            <option value="Law">Law</option>
+            <option value="Literature">Literature</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Medicine">Medicine</option>
+            <option value="Oaths">Oaths</option>
+            <option value="Philosophy">Philosophy</option>
+            <option value="Poetry">Poetry</option>
+            <option value="Politics">Politics</option>
+            <option value="Proclamations">Proclamations</option>
+            <option value="Prose">Prose</option>
+            <option value="Religion">Religion</option>
+            <option value="Science">Science</option>
+            <option value="Theology">Theology</option>
+            <option value="Translation">Translation</option>
+            <option value="Travel">Travel</option>
+        </select>
+
+        <select id="paratextFilter" class="form-control">
+            <option value="">Filter by Paratext Type</option>
+            <option value="Advertisement">Advertisement</option>
+            <option value="Catalogue">Catalogue</option>
+            <option value="Dedication">Dedication</option>
+            <option value="Errata">Errata</option>
+            <option value="Index">Index</option>
+            <option value="Table of Contents">Table of Contents</option>
+            <option value="To the Reader">To the Reader</option>
+            <option value="To the Stationer">To the Stationer</option>
+            <option value="Permission">Permission</option>
+        </select>
+
+        <br>
+        <br>
+
+        <button type="reset" onclick="clearFilters()">Clear Filters</button>
+        </form>
+        <br>
+    <button type="button" class="button-close" onclick="closeForm()">Close</button>
+    </div>
+</div>
+
+<div class="filter" class="filter-popup" id="filter-selection">
+</div>
