@@ -1,0 +1,240 @@
+<div class="filter">
+    <div>
+        <button class="open-button" onclick="openForm()">Filter</button> by Trade, Genre, and Paratext Type, and more.
+    </div>
+    <br>
+    <div>
+        <button type="reset" onclick="clearFilters()">Clear Filters</button>
+    </div>
+</div>
+
+<div id="filter-modal" class="modal">
+    <div class="filter-content" id="filter-selection">
+        <span class="close">&times;</span>
+        <form>
+
+        <select id="yearFilter" class="form-control">
+            <option value="">Filter by Year</option>
+            <option value="1492-1542">1492-1542</option>
+            <option value="1543-1593">1543-1593</option>
+            <option value="1594-1644">1594-1644</option>
+            <option value="1645-1679">1645-1679</option>
+        </select>
+
+        <input class="form-control" list="print-agents" id="printAgentChoiceFilter" placeholder="Print Agent...">
+        <datalist id="print-agents">
+        </datalist>
+
+        <select id="tradeFilter" class="form-control">
+            <option value="">Filter by Trade</option>
+            <option value="Author">Author</option>
+            <option value="Bookseller">Bookseller</option>
+            <option value="Company">Company</option>
+            <option value="Compiler">Compiler</option>
+            <option value="Compositor">Compositor</option>
+            <option value="Corrector">Corrector</option>
+            <option value="Editor">Editor</option>
+            <option value="Engraver">Engraver</option>
+            <option value="Overseer of the Print">Overseer of the Print</option>
+            <option value="Printer">Printer</option>
+            <option value="Print-Seller">Print-Seller</option>
+            <option value="Publisher">Publisher</option>
+            <option value="Setter-forth">Setter-forth</option>
+            <option value="Stationer">Stationer</option>
+            <option value="Translator">Translator</option>
+        </select>
+
+        <select id="genreFilter" class="form-control">
+            <option value="">Filter by Genre</option>
+            <option value="Agriculture">Agriculture</option>
+            <option value="Almanacs">Almanacs</option>
+            <option value="Anecdotes">Anecdotes</option>
+            <option value="Aphorisms">Aphorisms</option>
+            <option value="Aphorisms and Apothegms">Aphorisms and Apothegms</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Armada">Armada</option>
+            <option value="Astrology">Astrology</option>
+            <option value="Astronomy">Astronomy</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Arithmetic">Arithmetic</option>
+            <option value="Bible">Bible</option>
+            <option value="Biology">Biology</option>
+            <option value="Calendar">Calendar</option>
+            <option value="Caligraphy">Caligraphy</option>
+            <option value="Catalogue">Catalogue</option>
+            <option value="Catechisms">Catechisms</option>
+            <option value="Catholic Church">Catholic Church</option>
+            <option value="Christian Education">Christian Education</option>
+            <option value="Conduct">Conduct</option>
+            <option value="Conduct Manual">Conduct Manual</option>
+            <option value="Conduct and Etiquette">Conduct and Etiquette</option>
+            <option value="Comedies">Comedies</option>
+            <option value="Commonplace">Commonplace</option>
+            <option value="Cooking">Cooking</option>
+            <option value="Controversy">Controversy</option>
+            <option value="Constellations">Constellations</option>
+            <option value="Cosmography">Cosmography</option>
+            <option value="Courtesy">Courtesy</option>
+            <option value="Customs">Customs</option>
+            <option value="Death">Death</option>
+            <option value="Debate">Debate</option>
+            <option value="Debate on Women">Debate on Women</option>
+            <option value="Devotional">Devotional</option>
+            <option value="Dialogues">Dialogues</option>
+            <option value="Dictionary">Dictionary</option>
+            <option value="Distillation">Distillation</option>
+            <option value="Drainage">Drainage</option>
+            <option value="Drama">Drama</option>
+            <option value="Drinking">Drinking</option>
+            <option value="Economics">Economics</option>
+            <option value="Education">Education</option>
+            <option value="Emblems">Emblems</option>
+            <option value="Epigrams">Epigrams</option>
+            <option value="Epistolary">Epistolary</option>
+            <option value="Essays">Essays</option>
+            <option value="Etiquette">Etiquette</option>
+            <option value="Ettiquete and Courtesy">Ettiquete and Courtesy</option>
+            <option value="Ethics">Ethics</option>
+            <option value="Fens">Fens</option>
+            <option value="Financial">Financial</option>
+            <option value="Fishing">Fishing</option>
+            <option value="Foreign News">Foreign News</option>
+            <option value="Friendship">Friendship</option>
+            <option value="Funeral Orations">Funeral Orations</option>
+            <option value="Games">Games</option>
+            <option value="Gender">Gender</option>
+            <option value="Grammar">Grammar</option>
+            <option value="Geography">Geography</option>
+            <option value="Heraldry">Heraldry</option>
+            <option value="History">History</option>
+            <option value="Home Economics">Home Economics</option>
+            <option value="Horsemanship">Horsemanship</option>
+            <option value="Household">Household</option>
+            <option value="Hunting">Hunting</option>
+            <option value="Humor">Humor</option>
+            <option value="Husbandry">Husbandry</option>
+            <option value="Hygiene">Hygiene</option>
+            <option value="Illustration">Illustration</option>
+            <option value="Insanity">Insanity</option>
+            <option value="Instructions">Instructions</option>
+            <option value="Jests">Jests</option>
+            <option value="Jurisprudence">Jurisprudence</option>
+            <option value="Knighthood">Knighthood</option>
+            <option value="Knighthood and Chivalry">Knighthood and Chivalry</option>
+            <option value="Language">Language</option>
+            <option value="Law">Law</option>
+            <option value="Linguistics">Linguistics</option>
+            <option value="Literature">Literature</option>
+            <option value="Marriage">Marriage</option>
+            <option value="Martyrs">Martyrs</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Medicine">Medicine</option>
+            <option value="Meditations">Meditations</option>
+            <option value="Military">Military</option>
+            <option value="Miscellany">Miscellany</option>
+            <option value="Morality">Morality</option>
+            <option value="Music">Music</option>
+            <option value="Natural History">Natural History</option>
+            <option value="Naval Art and Science">Naval Art and Science</option>
+            <option value="News">News</option>
+            <option value="Novels">Novels</option>
+            <option value="Oaths">Oaths</option>
+            <option value="Pamphlet">Pamphlet</option>
+            <option value="Pastoral">Pastoral</option>
+            <option value="Philosophy">Philosophy</option>
+            <option value="Phrase Books">Phrase Books</option>
+            <option value="Picaresque">Picaresque</option>
+            <option value="Plague">Plague</option>
+            <option value="Plays">Plays</option>
+            <option value="Poetry">Poetry</option>
+            <option value="Politics">Politics</option>
+            <option value="Prayers">Prayers</option>
+            <option value="Proclamations">Proclamations</option>
+            <option value="Prose">Prose</option>
+            <option value="Proverbs">Proverbs</option>
+            <option value="Psalms">Psalms</option>
+            <option value="Recipes">Recipes</option>
+            <option value="Religion">Religion</option>
+            <option value="Reports">Reports</option>
+            <option value="Romance">Romance</option>
+            <option value="Science">Science</option>
+            <option value="Sermons">Sermons</option>
+            <option value="Shooting">Shooting</option>
+            <option value="Smoking">Smoking</option>
+            <option value="Teaching">Teaching</option>
+            <option value="Theater">Theater</option>
+            <option value="Theology">Theology</option>
+            <option value="Translation">Translation</option>
+            <option value="Travel">Travel</option>
+            <option value="Verse">Verse</option>
+            <option value="War">War</option>
+            <option value="Women">Women</option>
+        </select>
+
+        <select id="paratextFilter" class="form-control">
+            <option value="">Filter by Paratext Type</option>
+            <option value="Absent Author">Absent Author</option>
+            <option value="Addendum">Addendum</option>
+            <option value="Advertisement">Advertisement</option>
+            <option value="Calendar">Calendar</option>
+            <option value="Catalogue">Catalogue</option>
+            <option value="Colophon">Colophon</option>
+            <option value="Commendation">Commendation</option>
+            <option value="Dedication">Dedication</option>
+            <option value="Dialogue">Dialogue</option>
+            <option value="Envoy">Envoy</option>
+            <option value="Epistle">Epistle</option>
+            <option value="Errata">Errata</option>
+            <option value="Glossary">Glossary</option>
+            <option value="Illustration Instructions">Illustration Instructions</option>
+            <option value="Index">Index</option>
+            <option value="Patent">Patent</option>
+            <option value="Permission">Permission</option>
+            <option value="Poem">Poem</option>
+            <option value="Postscript">Postscript</option>
+            <option value="Preface">Preface</option>
+            <option value="Presentation">Presentation</option>
+            <option value="Printer to the Reader">Printer to the Reader</option>
+            <option value="Privilege">Privilege</option>
+            <option value="Stationer's Reply">Stationer's Reply</option>
+            <option value="Table">Table</option>
+            <option value="Table of Contents">Table of Contents</option>
+            <option value="To the Printer">To the Printer</option>
+            <option value="To the Reader">To the Reader</option>
+            <option value="To the Stationer">To the Stationer</option>
+            <option value="Verse">Verse</option>
+            <option value="Verse Advertisement">Verse Advertisement</option>
+        </select>
+
+        <select id="genderFilter" class="form-control">
+            <option value="">Filter by Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Unknown">Unknown</option>
+        </select>
+
+        <select id="dedicateeGenderFilter" class="form-control">
+            <option value="">Filter by Dedicatee Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Couple">Couple</option>
+            <option value="Group">Group</option>
+        </select>
+
+        <br>
+
+        <input class="form-control" type="checkbox" id="dedicateeFilter" value="True" unchecked>
+        <label for="dedicateeFilter">Check for filtering by whether or not has dedicatee</label>
+
+        <br>
+        <br>
+
+        <button type="reset" onclick="clearFilters()">Clear Filters</button>
+        </form>
+        <br>
+    <button type="button" class="button-close" onclick="closeForm()">Close</button>
+    </div>
+</div>
+
+<div class="filter" class="filter-popup" id="filter-selection">
+</div>

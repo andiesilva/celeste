@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Pedagogy
 ---
 <div class="page">
   

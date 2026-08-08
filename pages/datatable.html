@@ -37,6 +37,7 @@ title: Overall Data
         <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/pages/datatable">browse</a></li>
         <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/pages/women_datatable">women stationers</a></li>
         <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/pages/teaching">pedagogy</a></li>
+        <li class="hvr-underline-reveal"><a href="{{ site.baseurl }}/pages/contributions">contributions</a></li>
       </ul>
     </nav>
 
@@ -55,112 +56,7 @@ title: Overall Data
         </div>
       </p>
 
-      <div class="filter">
-        <div>
-          <button class="open-button" onclick="openForm()">Filter</button> by Trade, Genre, and Paratext Type, and more.
-        </div>
-        <br>
-        <div>
-          <button type="reset" onclick="clearFilters()">Clear Filters</button>
-        </div>
-      </div>
-
-      <div id="filter-modal" class="modal">
-        <div class="filter-content" id="filter-selection">
-          <span class="close">&times;</span>
-          <form>
-
-            <select id="yearFilter" class="form-control">
-              <option value="">Filter by Year</option>
-              <option value="1492-1542">1492-1542</option>
-              <option value="1543-1593">1543-1593</option>
-              <option value="1594-1644">1594-1644</option>
-              <option value="1645-1679">1645-1679</option>
-            </select>
-
-            <input class="form-control" list="print-agents" id="printAgentChoiceFilter" placeholder="Print Agent...">
-            <datalist id="print-agents">
-            </datalist>
-
-            <select id="tradeFilter" class="form-control">
-              <option value="">Filter by Trade</option>
-              <option value="Printer">Printer</option>
-              <option value="Publisher">Publisher</option>
-              <option value="Bookseller">Bookseller</option>
-              <option value="Editor">Editor</option>
-              <option value="Stationer">Stationer</option>
-            </select>
-
-            <select id="genreFilter" class="form-control">
-              <option value="">Filter by Genre</option>
-              <option value="Agriculture">Agriculture</option>
-              <option value="Almanac">Almanac</option>
-              <option value="Conduct">Conduct</option>
-              <option value="Devotional">Devotional</option>
-              <option value="Drama">Drama</option>
-              <option value="Epigrams">Epigrams</option>
-              <option value="Gender">Gender</option>
-              <option value="History">History</option>
-              <option value="Household">Household</option>
-              <option value="Humor">Humor</option>
-              <option value="Language">Language</option>
-              <option value="Medicine">Medicine</option>
-              <option value="Military">Military</option>
-              <option value="Music">Music</option>
-              <option value="Politics">Politics</option>
-              <option value="Prose">Prose</option>
-              <option value="Religion">Religion</option>
-              <option value="Translation">Translation</option>
-              <option value="Travel">Travel</option>
-              <option value="Verse">Verse</option>
-            </select>
-
-            <select id="paratextFilter" class="form-control">
-              <option value="">Filter by Paratext Type</option>
-              <option value="Advertisement">Advertisement</option>
-              <option value="Catalogue">Catalogue</option>
-              <option value="Dedication">Dedication</option>
-              <option value="Errata">Errata</option>
-              <option value="Index">Index</option>
-              <option value="Privilege">Privilege</option>
-              <option value="Table of Contents">Table of Contents</option>
-              <option value="To the Reader">To the Reader</option>
-              <option value="To the Stationer">To the Stationer</option>
-            </select>
-
-            <select id="genderFilter" class="form-control">
-              <option value="">Filter by Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Male | Female">Male | Female</option>
-              <option value="Unknown">Unknown</option>
-            </select>
-
-            <select id="dedicateeGenderFilter" class="form-control">
-              <option value="">Filter by Dedicatee Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Male | Female | Couple">Male | Female | Couple</option>
-              <option value="Male | Female | Group">Male | Female | Group</option>
-            </select>
-
-            <br>
-
-            <input class="form-control" type="checkbox" id="dedicateeFilter" value="True" unchecked>
-            <label for="dedicateeFilter">Check for filtering by whether or not has dedicatee</label>
-
-            <br>
-            <br>
-
-            <button type="reset" onclick="clearFilters()">Clear Filters</button>
-          </form>
-          <br>
-        <button type="button" class="button-close" onclick="closeForm()">Close</button>
-        </div>
-      </div>
-
-      <div class="filter" class="filter-popup" id="filter-selection">
-      </div>
+      {% include combined_filters.html %}
         
       <div id="resize_wrapper" class="container">
         {% include combined_table.html %}
